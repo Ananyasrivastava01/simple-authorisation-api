@@ -1,0 +1,20 @@
+How to Test?
+Start server: node server.js
+
+Use Postman or Thunder Client:
+
+POST http://localhost:3000/api/register
+
+json
+Copy code
+{
+  "username": "ananya",
+  "email": "ananya@gmail.com",
+  "password": "test1234"
+}
+POST http://localhost:3000/api/login
+
+Use returned token to call:
+
+GET http://localhost:3000/api/profile with Authorization: Bearer <token>
+
