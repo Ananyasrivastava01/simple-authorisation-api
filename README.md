@@ -43,96 +43,28 @@ JWT_SECRET=your_jwt_secret_key
 Replace the values with your actual MongoDB URI and a strong secret key.
 
 4️⃣ Run the server
-bash
-Copy
-Edit
-node server.js
-✅ You should see:
 
-arduino
-Copy
-Edit
+node server.js
+
 MongoDB connected
 Server running on port 3000
 🧪 API Endpoints
 🔹 Register
 POST /api/register
-
-json
-Copy
-Edit
-{
-  "username": "ananya",
-  "email": "ananya@gmail.com",
-  "password": "test1234"
-}
-✅ Response:
-
-json
-Copy
-Edit
-{
-  "message": "User registered",
-  "userId": "6439abcde12345"
-}
 🔹 Login
 POST /api/login
-
-json
-Copy
-Edit
-{
-  "email": "ananya@gmail.com",
-  "password": "test1234"
-}
-✅ Response:
-
-json
-Copy
-Edit
-{
-  "token": "JWT_TOKEN_HERE",
-  "username": "ananya"
-}
 🔹 Get Profile (Protected)
 GET /api/profile
 
 Add Authorization header:
-
-makefile
-Copy
-Edit
 Authorization: Bearer YOUR_TOKEN_HERE
-✅ Response:
 
-json
-Copy
-Edit
-{
-  "_id": "6439abcde12345",
-  "username": "ananya",
-  "email": "ananya@gmail.com"
-}
-❌ If token is missing or invalid:
-
-json
-Copy
-Edit
-{
-  "error": "Access Denied" // or "Invalid Token"
-}
 🔧 Technologies Used
 Node.js
-
 Express.js
-
 MongoDB + Mongoose
-
 bcryptjs for password hashing
-
 jsonwebtoken (JWT) for secure authentication
-
 dotenv for environment variables
-
 CORS for cross-origin requests
 
