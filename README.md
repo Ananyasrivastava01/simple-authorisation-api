@@ -8,20 +8,7 @@ This project is a simple and secure backend authentication API that allows users
 
 ✅ Access protected profile route using JWT (JSON Web Token)
 
-📁 Folder Structure
-pgsql
-Copy
-Edit
-.
-├── middleware/
-│   └── verifyToken.js       # Middleware to protect private routes
-├── models/
-│   └── User.js              # Mongoose User schema
-├── routes/
-│   └── auth.js              # Auth routes (register, login, profile)
-├── .env                     # Environment variables (Mongo URI, JWT secret)
-├── server.js                # Entry point of the server
-└── README.md
+
 🚀 Getting Started
 1️⃣ Clone the project
 bash
@@ -34,9 +21,6 @@ bash
 npm install
 3️⃣ Create .env file
 Create a .env file in the root directory and add:
-
-env
-
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
